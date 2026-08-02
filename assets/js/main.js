@@ -10,28 +10,28 @@ class SiteHeader extends HTMLElement {
           <a class="brand" href="${siteUrl("index.html")}"><img class="brand-logo" src="${siteUrl("assets/brand/wukf-france-logo.webp")}" alt="WUKF France"></a>
           <nav class="hidden items-center gap-6 lg:flex" aria-label="Navigation principale">
             <a class="nav-link" href="${siteUrl("index.html")}">Accueil</a>
-            <a class="nav-link" href="${siteUrl("federation/index.html")}">La F&eacute;d&eacute;ration</a>
+            <a class="nav-link" href="${siteUrl("federation.html")}">La F&eacute;d&eacute;ration</a>
             <a class="nav-link" href="${siteUrl("index.html#disciplines")}">Disciplines</a>
             <a class="nav-link" href="${siteUrl("index.html#actualites")}">Actualit&eacute;s</a>
             <a class="nav-link" href="${siteUrl("index.html#ancrage-regional")}">Ligues</a>
-            <a class="nav-link" href="${siteUrl("ressources/index.html")}">Ressources</a>
-            <a class="nav-link" href="${siteUrl("contact/index.html")}">Contact</a>
+            <a class="nav-link" href="${siteUrl("ressources.html")}">Ressources</a>
+            <a class="nav-link" href="${siteUrl("contact.html")}">Contact</a>
           </nav>
           <div class="flex items-center gap-3">
-            <a class="btn-primary hidden sm:inline-flex" href="${siteUrl("clubs/index.html#affiliation")}">Affilier mon club</a>
+            <a class="btn-primary hidden sm:inline-flex" href="${siteUrl("clubs.html#affiliation")}">Affilier mon club</a>
             <button class="btn-secondary lg:hidden" type="button" data-menu-button aria-controls="menu-mobile" aria-expanded="false">Menu</button>
           </div>
         </div>
         <nav id="menu-mobile" class="hidden border-t border-charcoal/10 bg-ivory lg:hidden" data-mobile-menu aria-label="Navigation mobile">
           <div class="wrap grid gap-2 py-4">
             <a class="nav-link py-2" href="${siteUrl("index.html")}">Accueil</a>
-            <a class="nav-link py-2" href="${siteUrl("federation/index.html")}">La F&eacute;d&eacute;ration</a>
+            <a class="nav-link py-2" href="${siteUrl("federation.html")}">La F&eacute;d&eacute;ration</a>
             <a class="nav-link py-2" href="${siteUrl("index.html#disciplines")}">Disciplines</a>
             <a class="nav-link py-2" href="${siteUrl("index.html#actualites")}">Actualit&eacute;s</a>
             <a class="nav-link py-2" href="${siteUrl("index.html#ancrage-regional")}">Ligues</a>
-            <a class="nav-link py-2" href="${siteUrl("ressources/index.html")}">Ressources</a>
-            <a class="nav-link py-2" href="${siteUrl("contact/index.html")}">Contact</a>
-            <a class="btn-primary mt-2" href="${siteUrl("clubs/index.html#affiliation")}">Affilier mon club</a>
+            <a class="nav-link py-2" href="${siteUrl("ressources.html")}">Ressources</a>
+            <a class="nav-link py-2" href="${siteUrl("contact.html")}">Contact</a>
+            <a class="btn-primary mt-2" href="${siteUrl("clubs.html#affiliation")}">Affilier mon club</a>
           </div>
         </nav>
       </header>
@@ -55,22 +55,22 @@ class SiteFooter extends HTMLElement {
           </div>
           <div>
             <h2 class="font-black">Navigation</h2>
-            <a class="footer-link mt-3 block" href="${siteUrl("federation/index.html")}">La F&eacute;d&eacute;ration</a>
-            <a class="footer-link mt-2 block" href="${siteUrl("clubs/index.html")}">Clubs</a>
+            <a class="footer-link mt-3 block" href="${siteUrl("federation.html")}">La F&eacute;d&eacute;ration</a>
+            <a class="footer-link mt-2 block" href="${siteUrl("clubs.html")}">Clubs</a>
             <a class="footer-link mt-2 block" href="${siteUrl("index.html#disciplines")}">Disciplines</a>
           </div>
           <div>
             <h2 class="font-black">Ressources</h2>
             <a class="footer-link mt-3 block" href="${siteUrl("index.html#actualites")}">Actualit&eacute;s</a>
-            <a class="footer-link mt-2 block" href="${siteUrl("ressources/index.html")}">Documents</a>
-            <a class="footer-link mt-2 block" href="${siteUrl("contact/index.html")}">Contact</a>
+            <a class="footer-link mt-2 block" href="${siteUrl("ressources.html")}">Documents</a>
+            <a class="footer-link mt-2 block" href="${siteUrl("contact.html")}">Contact</a>
           </div>
           <div>
             <h2 class="font-black">L&eacute;gal</h2>
-            <a class="footer-link mt-3 block" href="${siteUrl("mentions-legales/index.html")}">Mentions l&eacute;gales</a>
-            <a class="footer-link mt-2 block" href="${siteUrl("politique-confidentialite/index.html")}">Confidentialit&eacute;</a>
-            <a class="footer-link mt-2 block" href="${siteUrl("politique-cookies/index.html")}">Cookies</a>
-            <a class="footer-link mt-2 block" href="${siteUrl("accessibilite/index.html")}">Accessibilit&eacute;</a>
+            <a class="footer-link mt-3 block" href="${siteUrl("mentions-legales.html")}">Mentions l&eacute;gales</a>
+            <a class="footer-link mt-2 block" href="${siteUrl("politique-confidentialite.html")}">Confidentialit&eacute;</a>
+            <a class="footer-link mt-2 block" href="${siteUrl("politique-cookies.html")}">Cookies</a>
+            <a class="footer-link mt-2 block" href="${siteUrl("accessibilite.html")}">Accessibilit&eacute;</a>
           </div>
         </div>
       </footer>
