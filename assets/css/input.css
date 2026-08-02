@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-w-0 overflow-x-hidden bg-ivory text-charcoal antialiased;
+  }
+
+  :focus-visible {
+    @apply outline outline-2 outline-offset-4 outline-reddeep;
+  }
+}
+
+@layer components {
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-charcoal focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-white;
+  }
+
+  .site-header {
+    @apply sticky top-0 z-40 border-b border-charcoal/10 bg-ivory/95 backdrop-blur;
+  }
+
+  .wrap {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .brand {
+    @apply inline-flex items-center gap-3 font-display text-lg font-black uppercase tracking-[0.08em];
+  }
+
+  .brand-logo {
+    @apply h-12 w-auto max-w-[9.5rem] object-contain sm:max-w-[11rem];
+  }
+
+  .nav-link {
+    @apply text-sm font-bold uppercase tracking-[0.08em] text-charcoal/75 transition hover:text-reddeep;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 bg-reddeep px-5 py-3 text-sm font-black uppercase tracking-[0.06em] text-white transition hover:bg-charcoal;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 border border-charcoal/20 px-5 py-3 text-sm font-black uppercase tracking-[0.06em] text-charcoal transition hover:border-reddeep hover:text-reddeep;
+  }
+
+  .btn-ghost {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 px-4 py-2 text-sm font-bold text-charcoal transition hover:text-reddeep;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-tight {
+    @apply py-10 sm:py-14;
+  }
+
+  .eyebrow {
+    @apply mb-4 text-xs font-black uppercase tracking-[0.24em] text-reddeep;
+  }
+
+  .hero-title {
+    @apply max-w-4xl font-display text-5xl font-black uppercase leading-none sm:text-6xl lg:text-7xl;
+  }
+
+  .section-title {
+    @apply max-w-3xl font-display text-3xl font-black uppercase leading-tight sm:text-4xl;
+  }
+
+  .lead {
+    @apply max-w-2xl text-lg leading-8 text-charcoal/75;
+  }
+
+  .card {
+    @apply border border-charcoal/10 bg-white/55 p-5 shadow-line;
+  }
+
+  .card-media {
+    @apply mb-5 aspect-[4/3] w-full border border-charcoal/10 object-cover;
+  }
+
+  .media-frame {
+    @apply border border-charcoal/10 bg-stone/35 object-cover;
+  }
+
+  .tag {
+    @apply inline-flex items-center border border-reddeep/20 bg-reddeep/10 px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-reddeep;
+  }
+
+  .stat {
+    @apply border-l-2 border-reddeep bg-white/50 p-5;
+  }
+
+  .field {
+    @apply w-full border border-charcoal/20 bg-white px-4 py-3 text-base text-charcoal placeholder:text-charcoal/45;
+  }
+
+  .filter-btn {
+    @apply min-h-10 border border-charcoal/15 px-4 py-2 text-sm font-bold text-charcoal/75 transition hover:border-reddeep hover:text-reddeep;
+  }
+
+  .filter-btn.is-active {
+    @apply border-reddeep bg-reddeep text-white;
+  }
+
+  .footer-link {
+    @apply text-sm text-white/70 transition hover:text-white;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
