@@ -157,6 +157,34 @@
     @apply mt-3 text-sm leading-6 text-charcoal/65;
   }
 
+  .partners-section {
+    @apply bg-white/45;
+  }
+
+  .partner-grid {
+    @apply grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .partner-card {
+    @apply flex min-h-64 flex-col justify-between border border-charcoal/10 bg-white/70 p-6 shadow-line transition hover:-translate-y-1 hover:border-reddeep/30 hover:bg-white;
+  }
+
+  .partner-logo-frame {
+    @apply flex min-h-32 items-center justify-center border border-charcoal/10 bg-ivory/70 p-5;
+  }
+
+  .partner-logo {
+    @apply h-24 w-full object-contain;
+  }
+
+  .partner-meta {
+    @apply mt-6 text-xs font-black uppercase tracking-[0.14em] text-reddeep;
+  }
+
+  .partner-name {
+    @apply mt-2 text-2xl font-black leading-tight;
+  }
+
   .media-frame {
     @apply border border-charcoal/10 bg-stone/35 object-cover;
   }
