@@ -61,6 +61,10 @@
     @apply py-10 sm:py-14;
   }
 
+  .section-compact {
+    @apply py-10 sm:py-12 lg:py-14;
+  }
+
   .hero-section {
     @apply relative isolate overflow-hidden bg-charcoal text-white;
   }
@@ -198,7 +202,7 @@
   }
 
   .partners-section {
-    @apply bg-white/45;
+    @apply bg-ivory;
   }
 
   .partner-grid {
