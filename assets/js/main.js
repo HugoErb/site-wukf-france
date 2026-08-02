@@ -120,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.querySelector("#demo-contact-form");
 
   if (contactForm) {
-    const submitButton = contactForm.querySelector("button[type='submit']");
     const status = contactForm.querySelector("[data-form-status]");
 
     contactForm.addEventListener("submit", (event) => {
@@ -131,25 +130,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      if (submitButton) {
-        submitButton.disabled = true;
-        submitButton.textContent = "Simulation en cours...";
+      if (status) {
+        status.textContent = "Votre demande est prête à être envoyée dès raccordement du formulaire.";
       }
-
-      if (status) status.textContent = "";
-
-      window.setTimeout(() => {
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = "Envoyer la demande";
-        }
-
-        if (status) {
-          status.textContent = "Formulaire: votre message n\u2019a pas \u00e9t\u00e9 transmis automatiquement.";
-        }
-
-        contactForm.reset();
-      }, 700);
     });
   }
 });

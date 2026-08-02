@@ -225,6 +225,50 @@
     @apply mt-2 text-2xl font-black leading-tight;
   }
 
+  .contact-card {
+    @apply grid gap-6 border border-charcoal/10 bg-white/70 p-6 shadow-line md:grid-cols-[1fr_auto] md:items-center;
+  }
+
+  .contact-title {
+    @apply mt-4 font-display text-3xl font-black uppercase leading-tight;
+  }
+
+  .contact-text {
+    @apply mt-3 text-lg font-bold text-charcoal/70;
+  }
+
+  .contact-actions {
+    @apply flex flex-col gap-3 sm:flex-row md:flex-col;
+  }
+
+  .contact-person {
+    @apply flex min-h-72 flex-col border border-charcoal/10 bg-white/70 p-6 shadow-line;
+  }
+
+  .contact-role {
+    @apply text-xs font-black uppercase tracking-[0.14em] text-reddeep;
+  }
+
+  .contact-name {
+    @apply mt-4 text-2xl font-black;
+  }
+
+  .contact-link {
+    @apply mt-4 block break-words font-bold text-charcoal transition hover:text-reddeep;
+  }
+
+  .contact-note {
+    @apply mt-4 text-sm leading-6 text-charcoal/65;
+  }
+
+  .contact-panel {
+    @apply border-l-2 border-reddeep bg-white/45 p-6;
+  }
+
+  .contact-form {
+    @apply bg-white/75;
+  }
+
   .media-frame {
     @apply border border-charcoal/10 bg-stone/35 object-cover;
   }
