@@ -118,6 +118,51 @@ customElements.define("site-footer", SiteFooter);
 customElements.define("page-banner", PageBanner);
 
 document.addEventListener("DOMContentLoaded", () => {
+  const reduceMotion =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const revealItems = Array.from(
+    document.querySelectorAll(
+      [
+        "page-banner",
+        "main > section",
+        ".card",
+        ".practice-card",
+        ".news-card",
+        ".partner-card",
+        ".governance-card",
+        ".contact-person",
+        ".discipline-points",
+        ".discipline-info",
+        ".contact-panel",
+        ".region-map",
+        ".overseas-map-card",
+        ".stat",
+      ].join(",")
+    )
+  );
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  } else {
+    revealItems.forEach((item, index) => {
+      item.classList.add("scroll-reveal");
+      item.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+    );
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+  }
+
   const menuButton = document.querySelector("[data-menu-button]");
   const mobileMenu = document.querySelector("[data-mobile-menu]");
 
@@ -145,7 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-hero-carousel]").forEach((carousel) => {
     const slides = Array.from(carousel.querySelectorAll("[data-hero-slide]"));
     const dots = Array.from(carousel.querySelectorAll("[data-hero-dot]"));
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let activeIndex = 0;
 
     const setActiveSlide = (index) => {
