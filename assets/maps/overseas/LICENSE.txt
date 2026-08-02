@@ -1,0 +1,7 @@
+DROM source basis: france-geojson regions-avec-outre-mer.geojson
+Original data: IGN Admin Express COG / INSEE COG, Licence Ouverte Etalab
+URL: https://github.com/gregoiredavid/france-geojson
+French Polynesia source basis: OpenStreetMap contributors via Nominatim GeoJSON export
+License: ODbL 1.0 for OpenStreetMap data
+URL: https://www.openstreetmap.org/copyright
+Derived output: transparent PNG silhouettes for overseas map cards
