@@ -210,7 +210,7 @@
   }
 
   .partner-card {
-    @apply flex min-h-64 flex-col justify-between border border-charcoal/10 bg-white/70 p-6 shadow-line transition hover:-translate-y-1 hover:border-reddeep/30 hover:bg-white;
+    @apply flex min-h-64 flex-col justify-between border border-charcoal/10 bg-white/70 p-6 text-charcoal no-underline shadow-line transition hover:-translate-y-1 hover:border-reddeep/30 hover:bg-white;
   }
 
   .partner-logo-frame {
