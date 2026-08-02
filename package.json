@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "sync:partials": "node scripts/inject-partials.js",
-    "build": "npm run sync:partials && tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify",
-    "dev": "npm run sync:partials && tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+    "relativize:html": "node scripts/relativize-html.js",
+    "build": "npm run sync:partials && npm run relativize:html && tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify",
+    "dev": "npm run sync:partials && npm run relativize:html && tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
