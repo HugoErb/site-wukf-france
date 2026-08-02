@@ -1,0 +1,5 @@
+﻿Source basis: Wikimedia Commons
+File: France location map-Regions and departements-2016.svg
+Derived output: transparent PNG silhouette isolating the France/Corse land shape only
+License: see original file page
+URL: https://commons.wikimedia.org/wiki/File:France_location_map-Regions_and_departements-2016.svg
