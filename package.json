@@ -1,6 +1,7 @@
 {
   "name": "wukf-france-site",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "relativize:html": "node scripts/relativize-html.js",
