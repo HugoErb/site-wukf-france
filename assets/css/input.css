@@ -53,20 +53,12 @@
     @apply inline-flex min-h-11 items-center justify-center gap-2 border border-charcoal/20 px-5 py-3 text-sm font-black uppercase tracking-[0.06em] text-charcoal transition hover:border-reddeep hover:text-reddeep;
   }
 
-  .btn-ghost {
-    @apply inline-flex min-h-11 items-center justify-center gap-2 px-4 py-2 text-sm font-bold text-charcoal transition hover:text-reddeep;
-  }
-
   .section {
     @apply py-16 sm:py-20 lg:py-24;
   }
 
   .section-tight {
     @apply py-10 sm:py-14;
-  }
-
-  .section-compact {
-    @apply py-10 sm:py-12 lg:py-14;
   }
 
   page-banner {
@@ -373,10 +365,6 @@
 
   .contact-form {
     @apply bg-white/75;
-  }
-
-  .media-frame {
-    @apply border border-charcoal/10 bg-stone/35 object-cover;
   }
 
   .tag {

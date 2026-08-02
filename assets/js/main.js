@@ -181,20 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const newsButtons = document.querySelectorAll("[data-news-filter]");
-  const newsCards = document.querySelectorAll("[data-news-card]");
-
-  newsButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const filter = button.dataset.newsFilter;
-      newsButtons.forEach((item) => item.classList.remove("is-active"));
-      button.classList.add("is-active");
-      newsCards.forEach((card) => {
-        card.hidden = filter !== "tous" && card.dataset.category !== filter;
-      });
-    });
-  });
-
   const resourceSearch = document.querySelector("[data-resource-search]");
   const resourceButtons = document.querySelectorAll("[data-resource-filter]");
   const resourceCards = document.querySelectorAll("[data-resource-card]");
