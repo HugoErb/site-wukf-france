@@ -61,12 +61,52 @@
     @apply py-10 sm:py-14;
   }
 
+  .hero-section {
+    @apply relative isolate overflow-hidden bg-charcoal text-white;
+  }
+
+  .hero-carousel {
+    @apply absolute inset-0;
+  }
+
+  .hero-slide {
+    @apply absolute inset-0 h-full w-full object-cover opacity-0 mix-blend-luminosity transition-opacity duration-700;
+  }
+
+  .hero-slide.is-active {
+    @apply opacity-70;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(30,30,30,0.96)_0%,rgba(30,30,30,0.82)_42%,rgba(30,30,30,0.48)_100%)];
+  }
+
+  .hero-copy {
+    @apply relative max-w-3xl;
+  }
+
+  .hero-dots {
+    @apply absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-2;
+  }
+
+  .hero-dot {
+    @apply h-2 w-8 bg-white/35 transition;
+  }
+
+  .hero-dot.is-active {
+    @apply bg-goldsoft;
+  }
+
   .eyebrow {
     @apply mb-4 text-xs font-black uppercase tracking-[0.24em] text-reddeep;
   }
 
   .hero-title {
     @apply max-w-4xl font-display text-5xl font-black uppercase leading-none sm:text-6xl lg:text-7xl;
+  }
+
+  .hero-subtitle {
+    @apply mt-6 max-w-2xl text-xl leading-8 text-white/80;
   }
 
   .section-title {
