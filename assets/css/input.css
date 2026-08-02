@@ -265,6 +265,38 @@
     @apply mt-2 text-2xl font-black leading-tight;
   }
 
+  .federation-logo-panel {
+    @apply flex min-h-72 items-center justify-center p-6;
+  }
+
+  .federation-logo-panel img {
+    @apply h-auto w-full max-w-[14rem] object-contain sm:max-w-xs;
+  }
+
+  .governance-grid {
+    @apply grid gap-5 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .governance-card {
+    @apply flex min-h-36 items-center gap-4 border border-charcoal/10 bg-white/70 p-5 shadow-line;
+  }
+
+  .governance-card-main {
+    @apply border-reddeep/30 bg-white;
+  }
+
+  .governance-initials {
+    @apply flex h-16 w-16 shrink-0 items-center justify-center bg-reddeep font-display text-lg font-black text-white;
+  }
+
+  .governance-card h3 {
+    @apply text-lg font-black uppercase leading-tight;
+  }
+
+  .governance-card p {
+    @apply mt-2 text-sm font-bold text-charcoal/60;
+  }
+
   .contact-card {
     @apply grid gap-6 border border-charcoal/10 bg-white/70 p-6 shadow-line md:grid-cols-[1fr_auto] md:items-center;
   }
