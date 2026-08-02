@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify",
-    "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+    "sync:partials": "node scripts/inject-partials.js",
+    "build": "npm run sync:partials && tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify",
+    "dev": "npm run sync:partials && tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
