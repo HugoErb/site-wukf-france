@@ -69,6 +69,48 @@
     @apply py-10 sm:py-12 lg:py-14;
   }
 
+  page-banner {
+    @apply block;
+  }
+
+  .page-banner {
+    @apply relative overflow-hidden py-12 text-white sm:py-14 lg:py-16;
+    background: linear-gradient(135deg, #151515 0%, #1f1b1b 52%, #3b1719 100%);
+  }
+
+  .page-banner::after {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 bottom-0 h-px bg-goldsoft/45;
+  }
+
+  .page-banner-inner {
+    @apply grid gap-8;
+  }
+
+  .page-banner-inner-media {
+    @apply lg:grid-cols-[0.9fr_1.1fr] lg:items-center;
+  }
+
+  .page-banner-copy {
+    @apply max-w-3xl;
+  }
+
+  .page-banner-title {
+    @apply max-w-4xl font-display text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-5xl;
+  }
+
+  .page-banner-subtitle {
+    @apply mt-4 max-w-2xl text-base leading-7 text-white/75 sm:text-lg;
+  }
+
+  .page-banner-media {
+    @apply overflow-hidden border border-white/10 shadow-line;
+  }
+
+  .page-banner-media img {
+    @apply aspect-[16/10] w-full object-cover opacity-90;
+  }
+
   .hero-section {
     @apply relative isolate overflow-hidden bg-charcoal text-white;
   }
@@ -155,14 +197,6 @@
 
   .practice-text {
     @apply text-sm leading-6 text-charcoal/70;
-  }
-
-  .discipline-hero {
-    @apply relative overflow-hidden bg-charcoal py-16 text-white sm:py-20 lg:py-24;
-  }
-
-  .discipline-hero-image {
-    @apply aspect-[16/10] w-full border border-white/10 object-cover opacity-90 shadow-line;
   }
 
   .discipline-points {

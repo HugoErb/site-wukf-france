@@ -1,6 +1,13 @@
 const componentScript = document.currentScript ? new URL(document.currentScript.src) : new URL("assets/js/main.js", document.baseURI);
 const siteRoot = new URL("../../", componentScript);
 const siteUrl = (path) => new URL(path, siteRoot).href;
+const escapeHtml = (value) =>
+  String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 
 class SiteHeader extends HTMLElement {
   connectedCallback() {
@@ -78,8 +85,37 @@ class SiteFooter extends HTMLElement {
   }
 }
 
+class PageBanner extends HTMLElement {
+  connectedCallback() {
+    const eyebrow = this.getAttribute("eyebrow");
+    const title = this.getAttribute("title");
+    const subtitle = this.getAttribute("subtitle");
+    const image = this.getAttribute("image");
+    const imageAlt = this.getAttribute("image-alt") || title || "";
+    const isLogo = this.hasAttribute("logo");
+
+    this.innerHTML = `
+      <section class="page-banner">
+        <div class="wrap page-banner-inner${image ? " page-banner-inner-media" : ""}">
+          <div class="page-banner-copy">
+            ${eyebrow ? `<p class="eyebrow text-goldsoft">${escapeHtml(eyebrow)}</p>` : ""}
+            ${title ? `<h1 class="page-banner-title">${escapeHtml(title)}</h1>` : ""}
+            ${subtitle ? `<p class="page-banner-subtitle">${escapeHtml(subtitle)}</p>` : ""}
+          </div>
+          ${
+            image
+              ? `<div class="${isLogo ? "federation-logo-panel" : "page-banner-media"}"><img src="${siteUrl(image)}" alt="${escapeHtml(imageAlt)}"></div>`
+              : ""
+          }
+        </div>
+      </section>
+    `;
+  }
+}
+
 customElements.define("site-header", SiteHeader);
 customElements.define("site-footer", SiteFooter);
+customElements.define("page-banner", PageBanner);
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.querySelector("[data-menu-button]");
